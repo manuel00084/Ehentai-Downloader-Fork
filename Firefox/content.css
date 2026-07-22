@@ -1,0 +1,228 @@
+/* E-Hentai Downloader - Panel Styles (matches e-hentai theme) */
+.ehd-box {
+  margin: 10px auto 10px;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #b2a89e;
+  background: #f5f0e8;
+  color: #333;
+  padding: 0;
+  clear: both;
+}
+.ehd-box fieldset {
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  padding: 6px 10px;
+  margin: 0;
+  background: #f5f0e8;
+}
+.ehd-box legend {
+  font-weight: 700;
+  font-size: 13px;
+  color: #5c3a1e;
+  padding: 0 8px;
+  background: #f5f0e8;
+}
+.ehd-box a {
+  cursor: pointer;
+  color: #5c3a1e;
+  text-decoration: none;
+}
+.ehd-box a:hover {
+  text-decoration: underline;
+}
+.ehd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin: 5px 0;
+}
+.ehd-btn {
+  padding: 4px 10px;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  background: #ede7df;
+  color: #333;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ehd-btn:hover {
+  background: #e0d8ce;
+}
+.ehd-btn:active {
+  background: #d5cdc2;
+}
+.ehd-btn-primary {
+  background: #5c3a1e;
+  border-color: #4a2e16;
+  color: #fff;
+}
+.ehd-btn-primary:hover {
+  background: #6d4525;
+}
+.ehd-btn-danger {
+  background: #8b2e2e;
+  border-color: #6e2424;
+  color: #fff;
+}
+.ehd-btn-danger:hover {
+  background: #a03535;
+}
+.ehd-btn-success {
+  background: #2e6e3a;
+  border-color: #245a2e;
+  color: #fff;
+}
+.ehd-btn-success:hover {
+  background: #358042;
+}
+.ehd-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ehd-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #333;
+  font-size: 11px;
+  cursor: pointer;
+}
+.ehd-label input[type="checkbox"] {
+  cursor: pointer;
+}
+.ehd-input {
+  padding: 2px 5px;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  background: #fff;
+  color: #333;
+  font-size: 12px;
+  width: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ehd-input::placeholder {
+  color: #999;
+}
+.ehd-status {
+  margin-top: 4px;
+  padding: 3px 0;
+  font-size: 11px;
+  color: #555;
+  word-break: break-all;
+}
+.ehd-progress-container {
+  margin-top: 6px;
+  display: none;
+}
+.ehd-progress-bar {
+  width: 100%;
+  height: 16px;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.ehd-progress-fill {
+  height: 100%;
+  background: #5c3a1e;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+.ehd-progress-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 16px;
+  font-size: 10px;
+  color: #333;
+  z-index: 1;
+}
+.ehd-log {
+  margin-top: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  padding: 5px 7px;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  display: none;
+}
+.ehd-log-entry {
+  color: #555;
+}
+.ehd-log-entry.success {
+  color: #2e6e3a;
+}
+.ehd-log-entry.error {
+  color: #8b2e2e;
+}
+.ehd-log-entry.info {
+  color: #5c3a1e;
+}
+.ehd-settings-panel {
+  display: none;
+  margin-top: 6px;
+  padding: 6px 8px;
+  background: #ede7df;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+}
+.ehd-settings-panel .ehd-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 0;
+}
+.ehd-settings-panel label {
+  color: #333;
+  font-size: 11px;
+  min-width: 150px;
+}
+.ehd-settings-panel input[type="number"] {
+  width: 60px;
+}
+.ehd-settings-panel select {
+  padding: 2px 4px;
+  border: 1px solid #b2a89e;
+  border-radius: 0;
+  background: #fff;
+  color: #333;
+  font-size: 12px;
+}
+.ehd-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ccc;
+  border-top-color: #5c3a1e;
+  border-radius: 50%;
+  animation: ehd-spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+@keyframes ehd-spin {
+  to { transform: rotate(360deg); }
+}
+.ehd-rate-status {
+  margin-top: 4px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  background: #f5e6e6;
+  border: 1px solid #d4a0a0;
+  border-radius: 0;
+  display: none;
+}
+

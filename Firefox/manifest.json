@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "E-Hentai Downloader",
+  "version": "1.0.0",
+  "description": "Download E-Hentai galleries as ZIP files automatically. Based on ccloli/E-Hentai-Downloader.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ehentai-downloader@example.com",
+      "strict_min_version": "113.0"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "downloads",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://e-hentai.org/*",
+    "https://exhentai.org/*",
+    "http://e-hentai.org/*",
+    "http://exhentai.org/*",
+    "https://*.hath.network/*",
+    "https://*.e-hentai.org/*",
+    "https://ehgt.org/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://e-hentai.org/g/*",
+        "https://exhentai.org/g/*",
+        "http://e-hentai.org/g/*",
+        "http://exhentai.org/g/*",
+        "https://e-hentai.org/s/*",
+        "https://exhentai.org/s/*",
+        "http://e-hentai.org/s/*",
+        "http://exhentai.org/s/*"
+      ],
+      "js": ["lib/jszip.min.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  }
+}
